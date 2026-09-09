@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Witcher | OS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div id="desktop">
+    
+
+    <div class="desktop-icons">
+      <div class="icon" data-app="Bestiary">
+        <div class="icon-img">🐺</div>
+        <span class="icon-label">Bestiary</span>
+      </div>
+
+      <div class="icon" data-app="Contracts">
+        <div class="icon-img">📜</div>
+        <span class="icon-label">Contracts</span>
+      </div>
+
+      <div class="icon" data-app="Settings">
+        <div class="icon-img">⚙️</div>
+        <span class="icon-label">Settings</span>
+      </div>
+
+      <div class="icon" data-app="Music">
+        <div class="icon-img">🎵</div>
+        <span class="icon-label">Tavern Lute</span>
+      </div>
+    </div>
+
+
+    <div class="window" id="window-Bestiary" style="display: none;">
+      <div class="window-header">
+        <div class="window-title">🐺 Bestiary</div>
+        <div class="window-controls">
+          <button class="win-btn minimize-btn">_</button>
+          <button class="win-btn maximize-btn">□</button>
+          <button class="win-btn close-btn">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        
+ 
+        <div class="bestiary-list">
+          <div class="monster-tab active" data-target="gryf">🦅 Royal Gryphon</div>
+          <div class="monster-tab" data-target="leszy">🌲 Ancient Leshen</div>
+          <div class="monster-tab" data-target="poludnica">☀️ Noonwraith</div>
+          <div class="monster-tab" data-target="werewolf">🐺 Werewolf</div>
+          <div class="monster-tab" data-target="bies">👹 Fiend</div>
+          <div class="monster-tab" data-target="ghul">🧟 Ghoul</div>
+          <div class="monster-tab" data-target="vampire">🦇 Higher Vampire</div>
+          <div class="monster-tab" data-target="bazyliszek">🦎 Basilisk</div>
+          <div class="monster-tab" data-target="baba-cmentarna">👵 Grave Hag</div>
+
+        </div>
+
+
+        <div class="bestiary-content">
+
+
+          <div class="monster-card" id="card-gryf">
+            <h2 class="monster-name">Royal Gryphon</h2>
+            <p class="monster-meta"><strong>Class:</strong> Hybrids | <strong>Habitat:</strong> White Orchard, Skellige</p>
+            <div class="vulnerabilities">
+              <strong>Susceptibilities:</strong> 💨 Aard Sign • 💣 Grapeshot • 🗡️ Hybrid Oil
+            </div>
+            <hr class="witcher-hr">
+            <p class="monster-desc">
+              Griffins once dwelled solely in towering mountain peaks, but starvation has forced them down into populated valleys. They strike from the sky with terrifying speed, shredding prey with razor-sharp talons.
+            </p>
+            <div class="witcher-tips">
+              <strong>Witcher's Tactics:</strong> Use your crossbow to bring it crashing down mid-flight. Once grounded, ignite it with the Igni Sign or stagger it with Aard.
+            </div>
+          </div>
+
+
+          <div class="monster-card" id="card-leszy" style="display: none;">
+            <h2 class="monster-name">Ancient Leshen</h2>
+            <p class="monster-meta"><strong>Class:</strong> Relicts | <strong>Habitat:</strong> Primeval Forests, Velen</p>
+            <div class="vulnerabilities">
+              <strong>Susceptibilities:</strong> 🔥 Igni Sign • 💣 Dimeritium Bomb • 🗡️ Relict Oil
+            </div>
+            <hr class="witcher-hr">
+            <p class="monster-desc">
+              The Leshen is an ancient forest guardian fused with wood, roots, and bones. It commands forest beasts, summoning packs of wolves and murders of crows to do its bidding.
+            </p>
+            <div class="witcher-tips">
+              <strong>Witcher's Tactics:</strong> Made of living timber, the Leshen is highly vulnerable to fire. Burn it repeatedly with the Igni Sign and beware of subterranean roots bursting from the earth.
+            </div>
+          </div>
+
+
+          <div class="monster-card" id="card-poludnica" style="display: none;">
+            <h2 class="monster-name">Noonwraith</h2>
+            <p class="monster-meta"><strong>Class:</strong> Specters | <strong>Habitat:</strong> Cornfields, Midday Sun</p>
+            <div class="vulnerabilities">
+              <strong>Susceptibilities:</strong> 🔮 Yrden Sign • 💣 Moon Dust • 🗡️ Specter Oil
+            </div>
+            <hr class="witcher-hr">
+            <p class="monster-desc">
+              Born from the violent demise of young maidens before their wedding day. They manifest at scorching midday among swaying wheat fields, blinding and tormenting wandering travelers.
+            </p>
+            <div class="witcher-tips">
+              <strong>Witcher's Tactics:</strong> In its immaterial form, the specter takes minimal damage from swords. Lure it into an Yrden magic circle to force it into material form, then strike with a silver blade coated in Specter Oil.
+            </div>
+          </div>
+
+
+          <div class="monster-card" id="card-werewolf" style="display: none;">
+            <h2 class="monster-name">Werewolf</h2>
+            <p class="monster-meta"><strong>Class:</strong> Cursed Ones | <strong>Habitat:</strong> Deep Woods, Skellige, Near Settlements</p>
+            <div class="vulnerabilities">
+              <strong>Susceptibilities:</strong> 🔥 Igni Sign • 💣 Moon Dust • 🗡️ Cursed Oil
+            </div>
+            <hr class="witcher-hr">
+            <p class="monster-desc">
+              Werewolf transformation is an involuntary curse, wild and uncontrolled. Upon regaining human form, the afflicted retains no memory of their bloodthirsty deeds.
+            </p>
+            <div class="witcher-tips">
+              <strong>Witcher's Tactics:</strong> Werewolves possess formidable regenerative abilities. Suppress their healing with Moon Dust bombs or relentless Igni fire, keeping up fast strikes with a silver blade.
+            </div>
+          </div>
+
+
+          <div class="monster-card" id="card-bies" style="display: none;">
+            <h2 class="monster-name">Fiend</h2>
+            <p class="monster-meta"><strong>Class:</strong> Relicts | <strong>Habitat:</strong> Swamps, Bogs, Ancient Ruins</p>
+            <div class="vulnerabilities">
+              <strong>Susceptibilities:</strong> 🔥 Igni Sign • 💣 Devil's Puffball • 🗡️ Relict Oil
+            </div>
+            <hr class="witcher-hr">
+            <p class="monster-desc">
+              A colossus of muscle and fur crowned with heavy antlers and a maw of razor-sharp fangs. It avoids humans when possible, but slaughters anyone in its path with brutal efficiency.
+            </p>
+            <div class="witcher-tips">
+              <strong>Witcher's Tactics:</strong> A fiend combines crushing brute strength with the hypnotic magic of its third eye. Throw a Samum or Devil's Puffball bomb when it prepares its trance, and dodge behind its flanks.
+            </div>
+          </div>
+
+
+          <div class="monster-card" id="card-ghul" style="display: none;">
+            <h2 class="monster-name">Ghoul</h2>
+            <p class="monster-meta"><strong>Class:</strong> Necrophages | <strong>Habitat:</strong> Graveyards, Crypts, Battlefields</p>
+            <div class="vulnerabilities">
+              <strong>Susceptibilities:</strong> 🔥 Igni Sign • ⛓️ Silver • 🗡️ Necrophage Oil
+            </div>
+            <hr class="witcher-hr">
+            <p class="monster-desc">
+              Vile scavengers that feed on the dead, digging up graves mere hours after burial. In packs, they embolden and attack living prey, shredding flesh with jagged claws.
+            </p>
+            <div class="witcher-tips">
+              <strong>Witcher's Tactics:</strong> Ghouls are terrified of fire and vulnerable to silver. Burn them with the Igni Sign and prioritize cutting down any commanding Alghul to scatter the pack.
+            </div>
+          </div>
+
+
+          <div class="monster-card" id="card-vampire" style="display: none;">
+            <h2 class="monster-name">Higher Vampire</h2>
+            <p class="monster-meta"><strong>Class:</strong> Vampires | <strong>Habitat:</strong> Duchy of Toussaint, Hidden Mansions</p>
+            <div class="vulnerabilities">
+              <strong>Susceptibilities:</strong> 🔥 Igni Sign • 💣 Devil's Puffball • 🗡️ Vampire Oil
+            </div>
+            <hr class="witcher-hr">
+            <p class="monster-desc">
+              Supernaturally gifted beings possessing human elegance and immense magical prowess. They drink blood not for sustenance, but as intoxicating wine. Only another higher vampire can grant them true death.
+            </p>
+            <div class="witcher-tips">
+              <strong>Witcher's Tactics:</strong> Never allow it to vanish into mist. Disperse its mist form with the Igni Sign, quaff Black Blood before engagement, and strike with swift flurries of silver coated in Vampire Oil.
+            </div>
+          </div>
+
+          <div class="monster-card" id="card-bazyliszek" style="display: none;">
+            <h2 class="monster-name">Basilisk</h2>
+            <p class="monster-meta"><strong>Class:</strong> Draconids | <strong>Habitat:</strong> Caverns, Damp Cellars, Badlands</p>
+            <div class="vulnerabilities">
+              <strong>Susceptibilities:</strong> 💨 Aard Sign • 🧪 Golden Oriole • 🗡️ Draconid Oil
+            </div>
+            <hr class="witcher-hr">
+            <p class="monster-desc">
+              Contrary to popular folklore, a basilisk does not turn victims to stone with its gaze; it spews lethal acid and deadly neurotoxins. It boasts an avian beak and reptilian wings tipped with venomous barbs.
+            </p>
+            <div class="witcher-tips">
+              <strong>Witcher's Tactics:</strong> Drink a Golden Oriole potion before the duel to turn its venom harmless. Blast it out of the air or interrupt its charge with the Aard Sign, and stay clear of its whip-like tail.
+            </div>
+          </div>
+
+
+          <div class="monster-card" id="card-baba-cmentarna" style="display: none;">
+            <h2 class="monster-name">Grave Hag</h2>
+            <p class="monster-meta"><strong>Class:</strong> Necrophages | <strong>Habitat:</strong> Graveyards, Necropolises after Dark</p>
+            <div class="vulnerabilities">
+              <strong>Susceptibilities:</strong> 🔮 Yrden Sign • 🛡️ Quen Sign • 🗡️ Necrophage Oil
+            </div>
+            <hr class="witcher-hr">
+            <p class="monster-desc">
+              A grotesque necrophage resembling a withered, hunched crone. It cracks open tombstones and slurps marrow using an impossibly long, prehensile tongue that doubles as a deadly whip in combat.
+            </p>
+            <div class="witcher-tips">
+              <strong>Witcher's Tactics:</strong> Keep your Quen shield active to absorb sudden whiplashes from its tongue. When it lashes out, sever the tongue with a well-timed parry or trap the hag inside an Yrden circle.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="window" id="window-Contracts" style="display: none; top: 100px; left: 220px; width: 660px; height: 440px;">
+      <div class="window-header">
+        <div class="window-title">📜 Notice Board & Contracts</div>
+        <div class="window-controls">
+          <button class="win-btn minimize-btn">_</button>
+          <button class="win-btn maximize-btn">□</button>
+          <button class="win-btn close-btn">✕</button>
+        </div>
+      </div>
+      <div class="window-body">
+        
+
+        <div class="contracts-list">
+          <div class="contract-tab active" data-contract="well">
+            <span class="contract-tab-title">📜 Devil by the Well</span>
+            <span class="contract-tab-meta">White Orchard • 250 💰</span>
+          </div>
+          <div class="contract-tab" data-contract="honorton">
+            <span class="contract-tab-title">📜 Beast of Honorton</span>
+            <span class="contract-tab-meta">Velen • 320 💰</span>
+          </div>
+          <div class="contract-tab" data-contract="wood">
+            <span class="contract-tab-title">📜 Lord of the Wood</span>
+            <span class="contract-tab-meta">Novigrad • 450 💰</span>
+          </div>
+          <div class="contract-tab" data-contract="oxenfurt">
+            <span class="contract-tab-title">📜 The Oxenfurt Drunk</span>
+            <span class="contract-tab-meta">Oxenfurt • 380 💰</span>
+          </div>
+          <div class="contract-tab" data-contract="shrieker">
+            <span class="contract-tab-title">📜 The Shrieker</span>
+            <span class="contract-tab-meta">Crow's Perch • 300 💰</span>
+          </div>
+          <div class="contract-tab" data-contract="white_lady">
+            <span class="contract-tab-title">📜 The White Lady</span>
+            <span class="contract-tab-meta">Novigrad • 360 💰</span>
+          </div>
+          <div class="contract-tab" data-contract="haunted_lighthouse">
+            <span class="contract-tab-title">📜 Phantom of Eldberg</span>
+            <span class="contract-tab-meta">Skellige • 420 💰</span>
+          </div>
+          <div class="contract-tab" data-contract="swamp_thing">
+            <span class="contract-tab-title">📜 Swamp Thing</span>
+            <span class="contract-tab-meta">Velen • 400 💰</span>
+          </div>
+          <div class="contract-tab" data-contract="dragon">
+            <span class="contract-tab-title">📜 Dragon of Fyresdal</span>
+            <span class="contract-tab-meta">Skellige • 460 💰</span>
+          </div>
+          <div class="contract-tab" data-contract="sarasti">
+            <span class="contract-tab-title">📜 Mystery of Byways</span>
+            <span class="contract-tab-meta">Velen • 480 💰</span>
+          </div>
+          <div class="contract-tab" data-contract="skellige_morvudd">
+            <span class="contract-tab-title">📜 Missing Son: Morvudd</span>
+            <span class="contract-tab-meta">Skellige • 500 💰</span>
+          </div>
+          <div class="contract-tab" data-contract="tous_beast">
+            <span class="contract-tab-title">📜 Beast of Tufo</span>
+            <span class="contract-tab-meta">Toussaint • 550 💰</span>
+          </div>
+        </div>
+
+
+        <div class="contracts-content">
+
+          <div class="contract-view" id="view-well">
+            <div class="contract-header-banner">
+              <h2 class="contract-title">Contract: Devil by the Well</h2>
+              <span class="contract-badge open" id="badge-well">OPEN</span>
+            </div>
+            <p class="contract-info"><strong>Client:</strong> Odolan, Village Elder | <strong>Reward:</strong> 250 Crowns | <strong>Location:</strong> White Orchard</p>
+            <hr class="witcher-hr">
+            <div class="contract-letter">
+              „Hear ye, brave souls! A restless wraith haunts the old well at the deserted village. The water is tainted, and none can draw drink without hearing mournful wailing. My beloved daughter is burning with fever, and without pure water, she will not see the next dawn. Slay the fiend and name your fee!”
+            </div>
+
+
+            <div class="contract-actions" id="actions-well">
+              <button class="witcher-btn accept-btn" onclick="startContract('well', 250)">⚔️ Accept Contract</button>
+            </div>
+
+
+            <div class="contract-quiz" id="quiz-well" style="display: none;">
+              <p class="quiz-question">🎯 <strong>Tactical Choice:</strong> The Noonwraith is ethereal and invulnerable to plain steel. How will you force it into physical form to deliver the killing blow?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" onclick="resolveContract('well', false, 'Steel passed harmlessly through the spirit! The ghost scorched your eyes and you barely fled with your life.')">Cast Quen and slash repeatedly with your Steel Sword</button>
+                <button class="quiz-opt" onclick="resolveContract('well', true, 'Yrden circle trapped the spirit into corporeal form! A blast of Moon Dust sealed its magic, and your silver blade cleanly severed its ethereal ties!')">Lure into an Yrden magic circle & shatter with a Moon Dust bomb</button>
+                <button class="quiz-opt" onclick="resolveContract('well', false, 'The Noonwraith dissipated into the midday shimmer, unaffected by Aard, and returned to strike your back!')">Drink Golden Oriole potion and blast with Aard Sign</button>
+              </div>
+            </div>
+
+
+            <div class="contract-result" id="result-well" style="display: none;"></div>
+          </div>
+
+
+          <div class="contract-view" id="view-honorton" style="display: none;">
+            <div class="contract-header-banner">
+              <h2 class="contract-title">Contract: The Beast of Honorton</h2>
+              <span class="contract-badge open" id="badge-honorton">OPEN</span>
+            </div>
+            <p class="contract-info"><strong>Client:</strong> Alderman of Honorton | <strong>Reward:</strong> 320 Crowns | <strong>Location:</strong> Velen Wilderness</p>
+            <hr class="witcher-hr">
+            <div class="contract-letter">
+              „A bloodthirsty beast stalks our homestead after dusk. Two shepherds and an entire flock of sheep were torn to bloody shreds. Deep claw marks gouged into oak beams tell of a monster of unnatural malice. A hefty coin pouch awaits whoever brings its pelt!”
+            </div>
+
+            <div class="contract-actions" id="actions-honorton">
+              <button class="witcher-btn accept-btn" onclick="startContract('honorton', 320)">⚔️ Accept Contract</button>
+            </div>
+
+            <div class="contract-quiz" id="quiz-honorton" style="display: none;">
+              <p class="quiz-question">🎯 <strong>Tactical Choice:</strong> The Werewolf heals its wounds within seconds. How do you neutralize its savage regeneration?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" onclick="resolveContract('honorton', false, 'The werewolf is a Cursed One, not a necrophage! Your parry failed against its frenzy!')">Coat your steel blade with Necrophage Oil and parry its lunges</button>
+                <button class="quiz-opt" onclick="resolveContract('honorton', true, 'Moon Dust halted its cell regeneration! You ignited its pelt with Igni fire, cutting deep with Cursed Oil silver!')">Use Moon Dust bomb to halt healing, apply Cursed Oil, and ignite with Igni</button>
+                <button class="quiz-opt" onclick="resolveContract('honorton', false, 'Crossbow bolts bounced off its dense hide; the beast leaped across and gored your chest!')">Keep distance with a heavy crossbow and rely solely on Yrden</button>
+              </div>
+            </div>
+
+            <div class="contract-result" id="result-honorton" style="display: none;"></div>
+          </div>
+
+
+          <div class="contract-view" id="view-wood" style="display: none;">
+            <div class="contract-header-banner">
+              <h2 class="contract-title">Contract: Lord of the Wood</h2>
+              <span class="contract-badge open" id="badge-wood">OPEN</span>
+            </div>
+            <p class="contract-info"><strong>Client:</strong> Dwarven Timber Guild | <strong>Reward:</strong> 450 Crowns | <strong>Location:</strong> Ancient Woods, Novigrad</p>
+            <hr class="witcher-hr">
+            <div class="contract-letter">
+              „Woodcutters venturing past the old stone circle never return. The trees themselves seem to strangle intruders, and howling white wolves defend the grove. Our sawmill is halted. Rid our timberlands of this primeval terror!”
+            </div>
+
+            <div class="contract-actions" id="actions-wood">
+              <button class="witcher-btn accept-btn" onclick="startContract('wood', 450)">⚔️ Accept Contract</button>
+            </div>
+
+            <div class="contract-quiz" id="quiz-wood" style="display: none;">
+              <p class="quiz-question">🎯 <strong>Tactical Choice:</strong> The Ancient Leshen commands root spikes and summoned beasts. What is your strategy?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" onclick="resolveContract('wood', true, 'Fire tore through the living timber! A Dimeritium bomb neutralized its totem magic, and Relict Oil silver finished the guardian!')">Coat silver in Relict Oil, cast sweeping Igni firestorms, and detonate Dimeritium bombs</button>
+                <button class="quiz-opt" onclick="resolveContract('wood', false, 'The Leshen has no blood to drink! Poison spores had zero effect on living wood, and wolves overran you!')">Drink Black Blood and blanket the ground in Devil\'s Puffball poison</button>
+                <button class="quiz-opt" onclick="resolveContract('wood', false, 'Spikes erupted from beneath the moss before you could strike, impaling your leg!')">Charge blindly with two-handed heavy silver strikes</button>
+              </div>
+            </div>
+
+            <div class="contract-result" id="result-wood" style="display: none;"></div>
+          </div>
+
+
+          <div class="contract-view" id="view-oxenfurt" style="display: none;">
+            <div class="contract-header-banner">
+              <h2 class="contract-title">Contract: The Oxenfurt Drunk</h2>
+              <span class="contract-badge open" id="badge-oxenfurt">OPEN</span>
+            </div>
+            <p class="contract-info"><strong>Client:</strong> Nikolas Friedman, City Guard | <strong>Reward:</strong> 380 Crowns | <strong>Location:</strong> Oxenfurt Alleys</p>
+            <hr class="witcher-hr">
+            <div class="contract-letter">
+              „Scholars and drunken mercenaries are being drained dry in dark alleys near the harbor. The coroner found fang marks upon the throats. The creature only strikes solitary men reeking of liquor and dissolves into mist when cornered. Rake the alleys and bring us its head!”
+            </div>
+            <div class="contract-actions" id="actions-oxenfurt">
+              <button class="witcher-btn accept-btn" onclick="startContract('oxenfurt', 380)">⚔️ Accept Contract</button>
+            </div>
+            <div class="contract-quiz" id="quiz-oxenfurt" style="display: none;">
+              <p class="quiz-question">🎯 <strong>Tactical Choice:</strong> The Katakan avoids sober armed warriors and only hunts intoxicating drunk blood. How will you bait and trap it?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" onclick="resolveContract('oxenfurt', true, 'You got properly plastered at the tavern to bait it, quaffed Black Blood just before it bit, and scorched its wings with Igni when the poison surged through its veins!')">Get thoroughly drunk on cheap wine to bait it, drink Black Blood potion, and ignite with Igni when it bites</button>
+                <button class="quiz-opt" onclick="resolveContract('oxenfurt', false, 'The vampire smelled your complete sobriety and silver blade a mile away; it refused to show itself, and you caught pneumonia in the gutter!')">Patrol the midnight alleys fully sober with your drawn silver sword</button>
+                <button class="quiz-opt" onclick="resolveContract('oxenfurt', false, 'The Katakan dissolved into ethereal mist and slipped right over your physical steel jaw traps!')">Lay steel bear traps across the alley and wait behind barrels</button>
+              </div>
+            </div>
+            <div class="contract-result" id="result-oxenfurt" style="display: none;"></div>
+          </div>
+
+
+          <div class="contract-view" id="view-shrieker" style="display: none;">
+            <div class="contract-header-banner">
+              <h2 class="contract-title">Contract: The Shrieker</h2>
+              <span class="contract-badge open" id="badge-shrieker">OPEN</span>
+            </div>
+            <p class="contract-info"><strong>Client:</strong> Chet, Baron's Quartermaster | <strong>Reward:</strong> 300 Crowns | <strong>Location:</strong> Crow's Perch, Velen</p>
+            <hr class="witcher-hr">
+            <div class="contract-letter">
+              „A winged horror made its nest in the limestone cliffs near the moat. It screams so fierce it curdles cow milk and tears horses clean from their wagons. It roosts on high cavern ledges where men cannot reach. Drive it out or die trying!”
+            </div>
+            <div class="contract-actions" id="actions-shrieker">
+              <button class="witcher-btn accept-btn" onclick="startContract('shrieker', 300)">⚔️ Accept Contract</button>
+            </div>
+            <div class="contract-quiz" id="quiz-shrieker" style="display: none;">
+              <p class="quiz-question">🎯 <strong>Tactical Choice:</strong> The Cockatrice perches on an inaccessible cavern ceiling in the dark. How do you force it outside?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" onclick="resolveContract('shrieker', false, 'You attempted to scale the slick rock in total darkness; the Shrieker pecked your hands, causing you to plunge into the abyss!')">Climb the slick limestone walls in silence and attack with your dagger</button>
+                <button class="quiz-opt" onclick="resolveContract('shrieker', true, 'The loud concussive blast of Grapeshot panicked the beast, flushing it out of the cave where your crossbow pierced its wing!')">Hurl a Grapeshot bomb into its cavern roost to flush it out into daylight, then shoot it down with a crossbow</button>
+                <button class="quiz-opt" onclick="resolveContract('shrieker', false, 'The distance was too great for Axii; its deafening shriek stunned your ears and collapsed stalactites on your head!')">Cast Axii from the cave entrance to hypnotize it down</button>
+              </div>
+            </div>
+            <div class="contract-result" id="result-shrieker" style="display: none;"></div>
+          </div>
+
+
+          <div class="contract-view" id="view-white_lady" style="display: none;">
+            <div class="contract-header-banner">
+              <h2 class="contract-title">Contract: The White Lady</h2>
+              <span class="contract-badge open" id="badge-white_lady">OPEN</span>
+            </div>
+            <p class="contract-info"><strong>Client:</strong> Widow Helma | <strong>Reward:</strong> 360 Crowns | <strong>Location:</strong> Farcorners Fields, Novigrad</p>
+            <hr class="witcher-hr">
+            <div class="contract-letter">
+              „Four stout youths went to reap grain at midday and returned as frozen white husks, their marrow dried out. A maiden dressed in a wedding shroud drifts over the rye. Our village will starve if the harvest is not brought in!”
+            </div>
+            <div class="contract-actions" id="actions-white_lady">
+              <button class="witcher-btn accept-btn" onclick="startContract('white_lady', 360)">⚔️ Accept Contract</button>
+            </div>
+            <div class="contract-quiz" id="quiz-white_lady" style="display: none;">
+              <p class="quiz-question">🎯 <strong>Tactical Choice:</strong> The Noonwraith conjures blinding mirror clones of herself that regenerate her health when struck. What is your tactic?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" onclick="resolveContract('white_lady', true, 'A 360-degree Aard burst shattered the mirror illusions instantly, while Yrden pinned the real White Lady down for Specter Oil silver strikes!')">Dispel the fragile mirror clones with a sweeping Aard burst, then trap the real wraith within an Yrden circle</button>
+                <button class="quiz-opt" onclick="resolveContract('white_lady', false, 'Striking the clones directly caused them to detonate into blinding flashes of light, fully restoring her health!')">Slash each mirror clone as fast as possible with light steel attacks</button>
+                <button class="quiz-opt" onclick="resolveContract('white_lady', false, 'At sunset she simply vanished into the earth until tomorrow noon, leaving your contract unfulfilled!')">Wait until the sun completely sets so she loses her power</button>
+              </div>
+            </div>
+            <div class="contract-result" id="result-white_lady" style="display: none;"></div>
+          </div>
+
+          <div class="contract-view" id="view-haunted_lighthouse" style="display: none;">
+            <div class="contract-header-banner">
+              <h2 class="contract-title">Contract: The Phantom of Eldberg</h2>
+              <span class="contract-badge open" id="badge-haunted_lighthouse">OPEN</span>
+            </div>
+            <p class="contract-info"><strong>Client:</strong> Jorund of Elverum | <strong>Reward:</strong> 420 Crowns | <strong>Location:</strong> Spikeroog Lighthouse, Skellige</p>
+            <hr class="witcher-hr">
+            <div class="contract-letter">
+              „The beacon atop Eldberg island burns with a cursed black luminescence. Ghostly fog has blanketed the straits, and ships are smashing against the reefs. The lighthouse keeper is dead, and a penitent wraith roams the rocks, invulnerable to steel and iron!”
+            </div>
+            <div class="contract-actions" id="actions-haunted_lighthouse">
+              <button class="witcher-btn accept-btn" onclick="startContract('haunted_lighthouse', 420)">⚔️ Accept Contract</button>
+            </div>
+            <div class="contract-quiz" id="quiz-haunted_lighthouse" style="display: none;">
+              <p class="quiz-question">🎯 <strong>Tactical Choice:</strong> The Penitent wraith takes zero damage from your silver sword in the thick fog. Why can\'t you harm it?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" onclick="resolveContract('haunted_lighthouse', true, 'The cursed dark flame inside the lighthouse was feeding the wraith invincibility! Once extinguished, your silver blade cut it down!')">The Penitent draws invulnerability from the cursed beacon fire! You must run into the lighthouse and extinguish the fire first!</button>
+                <button class="quiz-opt" onclick="resolveContract('haunted_lighthouse', false, 'No matter how much Specter Oil you applied, the supernatural curse tethered to the lighthouse kept it immortal!')">You forgot to apply Specter Oil; apply three thick coatings of oil</button>
+                <button class="quiz-opt" onclick="resolveContract('haunted_lighthouse', false, 'The phantom of penance is born of ancient sea curses and laughed at your attempt at mind control!')">Cast Axii to force the phantom to submit to judgment</button>
+              </div>
+            </div>
+            <div class="contract-result" id="result-haunted_lighthouse" style="display: none;"></div>
+          </div>
+
+
+          <div class="contract-view" id="view-swamp_thing" style="display: none;">
+            <div class="contract-header-banner">
+              <h2 class="contract-title">Contract: Swamp Thing</h2>
+              <span class="contract-badge open" id="badge-swamp_thing">OPEN</span>
+            </div>
+            <p class="contract-info"><strong>Client:</strong> Leslav the Hermit | <strong>Reward:</strong> 400 Crowns | <strong>Location:</strong> Crookback Bog, Velen</p>
+            <hr class="witcher-hr">
+            <div class="contract-letter">
+              „The mud breathes foul gas and a pale devil named Ignis Fatuus lurks in the mist. It mimics cries of dying travelers to lure scavengers into quagmires, then dissolves into smoke. The stench of rot is everywhere.”
+            </div>
+            <div class="contract-actions" id="actions-swamp_thing">
+              <button class="witcher-btn accept-btn" onclick="startContract('swamp_thing', 400)">⚔️ Accept Contract</button>
+            </div>
+            <div class="contract-quiz" id="quiz-swamp_thing" style="display: none;">
+              <p class="quiz-question">🎯 <strong>Tactical Choice:</strong> The swamp is blanketed in toxic, explosive marsh gas, and the ancient Foglet is invisible within the fog. How do you survive and fight?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" onclick="resolveContract('swamp_thing', false, 'The fire spark of Igni ignited the airborne marsh gas in a deafening fireball, blowing Geralt to pieces!')">Cast Igni to set the entire mist ablaze around you</button>
+                <button class="quiz-opt" onclick="resolveContract('swamp_thing', true, 'Golden Oriole turned toxic bog gas into health regeneration, while Moon Dust particles coated the Foglet, preventing it from vanishing!')">Drink Golden Oriole to turn poison gas into healing, and throw Moon Dust to prevent it from turning into invisible fog</button>
+                <button class="quiz-opt" onclick="resolveContract('swamp_thing', false, 'Drowners lurking in the deep bog mud grabbed your ankles and dragged you under while the foglet watched!')">Submerge into the marsh water to escape the toxic fumes</button>
+              </div>
+            </div>
+            <div class="contract-result" id="result-swamp_thing" style="display: none;"></div>
+          </div>
+
+
+          <div class="contract-view" id="view-dragon" style="display: none;">
+            <div class="contract-header-banner">
+              <h2 class="contract-title">Contract: Dragon of Fyresdal</h2>
+              <span class="contract-badge open" id="badge-dragon">OPEN</span>
+            </div>
+            <p class="contract-info"><strong>Client:</strong> Vagn of Fyresdal | <strong>Reward:</strong> 460 Crowns | <strong>Location:</strong> Skellige Peaks</p>
+            <hr class="witcher-hr">
+            <div class="contract-letter">
+              „A scaled wyrm of colossal size swoops from the clouds, carrying off entire bullocks and burning mountain cabins! The Jarl promises gold to the dragonslayer who delivers the monster\'s horned skull!”
+            </div>
+            <div class="contract-actions" id="actions-dragon">
+              <button class="witcher-btn accept-btn" onclick="startContract('dragon', 460)">⚔️ Accept Contract</button>
+            </div>
+            <div class="contract-quiz" id="quiz-dragon" style="display: none;">
+              <p class="quiz-question">🎯 <strong>Tactical Choice:</strong> True dragons are protected by the Witcher Code. What is your investigation and response?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" onclick="resolveContract('dragon', true, 'Examining the claw marks revealed it was not a true dragon, but a massive Forktail! You coated silver in Draconid Oil, shattered its wings with Aard, and collected the reward!')">Examine the prints: deduce it is actually an overgrown Forktail (Draconid), apply Draconid Oil, and bring it down with Aard</button>
+                <button class="quiz-opt" onclick="resolveContract('dragon', false, 'The jarl declared you a coward and banished you from Fyresdal; another mercenary later proved it was just a lizard!')">Refuse the contract on the spot because the Witcher Code strictly forbids killing dragons</button>
+                <button class="quiz-opt" onclick="resolveContract('dragon', false, 'The flying predator incinerated the sheep in mid-air and dropped flaming debris right onto the village barn!')">Stuff a dead sheep with sulfur and pitch like the legend of the Wawel Dragon</button>
+              </div>
+            </div>
+            <div class="contract-result" id="result-dragon" style="display: none;"></div>
+          </div>
+
+ 
+          <div class="contract-view" id="view-sarasti" style="display: none;">
+            <div class="contract-header-banner">
+              <h2 class="contract-title">Contract: Mystery of the Byways</h2>
+              <span class="contract-badge open" id="badge-sarasti">OPEN</span>
+            </div>
+            <p class="contract-info"><strong>Client:</strong> Nilfgaardian Patrol Commander | <strong>Reward:</strong> 480 Crowns | <strong>Location:</strong> Byways, Southern Velen</p>
+            <hr class="witcher-hr">
+            <div class="contract-letter">
+              „An entire detachment of Nilfgaardian soldiers went missing in Byways. The villagers cower in their huts and mutter of subterranean curses. Blood trails lead down into the collapsed Elven catacombs.”
+            </div>
+            <div class="contract-actions" id="actions-sarasti">
+              <button class="witcher-btn accept-btn" onclick="startContract('sarasti', 480)">⚔️ Accept Contract</button>
+            </div>
+            <div class="contract-quiz" id="quiz-sarasti" style="display: none;">
+              <p class="quiz-question">🎯 <strong>Tactical Choice:</strong> In the pitch-black catacombs, an ancient Ekimmara vampire lunges with sonic screeching. What is your preparation?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" onclick="resolveContract('sarasti', true, 'Cat potion granted perfect night vision, Black Blood poisoned the beast when it clawed you, and intense Igni flame illuminated its blindspots!')">Drink Cat potion to see in total dark, quaff Black Blood, and burn the beast with Igni while striking with Vampire Oil</button>
+                <button class="quiz-opt" onclick="resolveContract('sarasti', false, 'Holding a burning wooden torch occupied your sword hand; the Ekimmara knocked the torch away and severed your jugular!')">Hold a burning torch in your off-hand to illuminate the darkness while swinging your sword</button>
+                <button class="quiz-opt" onclick="resolveContract('sarasti', false, 'Ekimmaras are lower feral vampires incapable of speech; it ignored your Axii and gouged your shoulder!')">Cast Axii and try to parley with the vampire</button>
+              </div>
+            </div>
+            <div class="contract-result" id="result-sarasti" style="display: none;"></div>
+          </div>
+
+
+          <div class="contract-view" id="view-skellige_morvudd" style="display: none;">
+            <div class="contract-header-banner">
+              <h2 class="contract-title">Contract: Missing Son (Morvudd)</h2>
+              <span class="contract-badge open" id="badge-skellige_morvudd">OPEN</span>
+            </div>
+            <p class="contract-info"><strong>Client:</strong> Thorleif, Elder of Rannvaig | <strong>Reward:</strong> 500 Crowns | <strong>Location:</strong> Boxholm Ruins, Skellige</p>
+            <hr class="witcher-hr">
+            <div class="contract-letter">
+              „My boy Olve and his companions went to prove their warrior prowess near the Boxholm ruins. None returned alive. A monstrous horned Fiend named Morvudd has made its lair upon the ruined altar. It possesses the hypnotic Evil Eye!”
+            </div>
+            <div class="contract-actions" id="actions-skellige_morvudd">
+              <button class="witcher-btn accept-btn" onclick="startContract('skellige_morvudd', 500)">⚔️ Accept Contract</button>
+            </div>
+            <div class="contract-quiz" id="quiz-skellige_morvudd" style="display: none;">
+              <p class="quiz-question">🎯 <strong>Tactical Choice:</strong> Morvudd opens its glowing third eye, plunging your vision into total pitch-black magical blindness. How do you counter?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" onclick="resolveContract('skellige_morvudd', true, 'Trusting your heightened hearing, a pinpoint Samum flash bomb disoriented Morvudd and broke the hypnotic curse, letting you flank its antlers!')">Rely on Witcher hearing, hurl a Samum flash bomb directly at the glowing eye to disrupt the trance, and roll backwards</button>
+                <button class="quiz-opt" onclick="resolveContract('skellige_morvudd', false, 'Standing still while blind was fatal; Morvudd charged like a runaway battering ram and trampled your ribs!')">Stand completely still and wait for the magical blindness to wear off</button>
+                <button class="quiz-opt" onclick="resolveContract('skellige_morvudd', false, 'Cat potion enhances natural light, but does nothing against magical psychic blindness; you got impaled on heavy horns!')">Drink Cat potion to see through the psychic dark</button>
+              </div>
+            </div>
+            <div class="contract-result" id="result-skellige_morvudd" style="display: none;"></div>
+          </div>
+
+
+          <div class="contract-view" id="view-tous_beast" style="display: none;">
+            <div class="contract-header-banner">
+              <h2 class="contract-title">Contract: The Beast of Tufo</h2>
+              <span class="contract-badge open" id="badge-tous_beast">OPEN</span>
+            </div>
+            <p class="contract-info"><strong>Client:</strong> Monsieur de Bourbeau | <strong>Reward:</strong> 550 Crowns | <strong>Location:</strong> Tufo Vineyard, Toussaint</p>
+            <hr class="witcher-hr">
+            <div class="contract-letter">
+              „Unearthly tremors shake our wine cellars every night! Ancient oak casks are shattered and the ground is collapsing into subterranean chasms. A subterranean monster clad in thick stone carapace is tunneling through our grand vintage!”
+            </div>
+            <div class="contract-actions" id="actions-tous_beast">
+              <button class="witcher-btn accept-btn" onclick="startContract('tous_beast', 550)">⚔️ Accept Contract</button>
+            </div>
+            <div class="contract-quiz" id="quiz-tous_beast" style="display: none;">
+              <p class="quiz-question">🎯 <strong>Tactical Choice:</strong> The Shaelmaar's rock-hard armored shell repels every sword slash and bomb. How can you damage it?</p>
+              <div class="quiz-options">
+                <button class="quiz-opt" onclick="resolveContract('tous_beast', true, 'The blind beast tracked sounds with echolocation! By throwing a bomb against the stone wall, it charged, knocked itself out cold, and exposed its soft underbelly!')">Lure its blind echolocation by throwing a bomb against the rock wall; when it charges and crashes, slash its exposed soft belly!</button>
+                <button class="quiz-opt" onclick="resolveContract('tous_beast', false, 'The silver warhammer bounced off the armored plates like a pebble; the beast rolled into a boulder and crushed you!')">Use a two-handed heavy silver warhammer to crack its shell</button>
+                <button class="quiz-opt" onclick="resolveContract('tous_beast', false, 'The beast curled into a spinning spiked boulder and ground you into vineyard fertilizer!')">Cast Axii to tame it and mount its back</button>
+              </div>
+            </div>
+            <div class="contract-result" id="result-tous_beast" style="display: none;"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="window" id="window-Settings" style="display: none; width: 620px; height: 520px; top: 100px; left: 240px;">
+      <div class="window-header">
+        <div class="window-title">⚙️ WitcherOS Settings</div>
+        <div class="window-controls">
+          <button class="win-btn minimize-btn">_</button>
+          <button class="win-btn maximize-btn">□</button>
+          <button class="win-btn close-btn">✕</button>
+        </div>
+      </div>
+      <div class="window-body settings-body">
+        
+
+        <div class="settings-section">
+          <div class="settings-section-header">
+            <h3>🐺 Witcher School Theme (Accent Colors)</h3>
+            <p>Select your witcher guild to reforge system UI accents, glow, and borders.</p>
+          </div>
+          <div class="theme-grid">
+            <div class="theme-card active" data-school="wolf">
+              <div class="theme-preview wolf-preview"></div>
+              <div class="theme-info">
+                <strong>School of the Wolf</strong>
+                <span>Crimson Red & Deep Steel</span>
+              </div>
+            </div>
+
+            <div class="theme-card" data-school="cat">
+              <div class="theme-preview cat-preview"></div>
+              <div class="theme-info">
+                <strong>School of the Cat</strong>
+                <span>Cyan Blue & Electric Aura</span>
+              </div>
+            </div>
+
+            <div class="theme-card" data-school="bear">
+              <div class="theme-preview bear-preview"></div>
+              <div class="theme-info">
+                <strong>School of the Bear</strong>
+                <span>Emerald Green & Skellige Pine</span>
+              </div>
+            </div>
+
+            <div class="theme-card" data-school="viper">
+              <div class="theme-preview viper-preview"></div>
+              <div class="theme-info">
+                <strong>School of the Viper</strong>
+                <span>Amber Gold & Venom Glow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="witcher-hr">
+
+
+        <div class="settings-section">
+          <div class="settings-section-header">
+            <h3>🖼️ Desktop Wallpaper</h3>
+            <p>Choose an atmospheric realm background for WitcherOS.</p>
+          </div>
+          <div class="wallpaper-grid">
+            <button class="wallpaper-opt active" data-wallpaper="kaer-morhen">
+              <span class="wp-badge">🏰 Kaer Morhen</span>
+              <span class="wp-desc">Night citadel & ember glow</span>
+            </button>
+            <button class="wallpaper-opt" data-wallpaper="velen">
+              <span class="wp-badge">🌲 Velen Bog</span>
+              <span class="wp-desc">Murky swamp mist & dark gloom</span>
+            </button>
+            <button class="wallpaper-opt" data-wallpaper="toussaint">
+              <span class="wp-badge">🍷 Toussaint Sunset</span>
+              <span class="wp-desc">Warm twilight & vineyard hues</span>
+            </button>
+            <button class="wallpaper-opt" data-wallpaper="void">
+              <span class="wp-badge">🌑 Minimalist Abyss</span>
+              <span class="wp-desc">Pure pitch black & subtle grid</span>
+            </button>
+          </div>
+        </div>
+
+        <hr class="witcher-hr">
+
+
+        <div class="settings-section">
+          <div class="settings-section-header">
+            <h3>⏱️ System Clock & Time Display</h3>
+            <p>Customize the format of the sun dial on your taskbar.</p>
+          </div>
+          <div class="clock-settings-row">
+            <div class="setting-toggle-group">
+              <label class="setting-toggle-label">
+                <span>Clock Mode:</span>
+                <select id="setting-clock-mode" class="witcher-select">
+                  <option value="24h">24-Hour Military (17:00:00)</option>
+                  <option value="12h">12-Hour AM/PM (05:00:00 PM)</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="setting-toggle-group">
+              <label class="setting-toggle-label checkbox-label">
+                <input type="checkbox" id="setting-show-seconds" checked>
+                <span>Display Seconds (:ss)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="window" id="window-Music" style="display: none; width: 520px; height: 490px; top: 75px; left: 240px;">
+      <div class="window-header">
+        <div class="window-title">🎵 Dandelion's Lute | Tavern Music Player</div>
+        <div class="window-controls">
+          <button class="win-btn minimize-btn">_</button>
+          <button class="win-btn maximize-btn">□</button>
+          <button class="win-btn close-btn">✕</button>
+        </div>
+      </div>
+      <div class="window-body music-player-body">
+        
+
+        <div class="now-playing-card">
+          <div class="disk-spinner-container">
+            <div class="lute-disk" id="lute-disk">🪕</div>
+          </div>
+          <div class="track-details">
+            <span class="track-badge" id="player-status-badge">NOW PERFORMING</span>
+            <h3 id="current-track-title">Silver for Monsters</h3>
+            <p id="current-track-artist">Marcin Przybyłowicz & Percival</p>
+          </div>
+        </div>
+
+
+        <div class="audio-controls-box">
+          <div class="audio-progress-wrap">
+            <span id="current-time-text">0:00</span>
+            <input type="range" id="audio-seek-bar" min="0" max="100" value="0" class="witcher-slider">
+            <span id="duration-time-text">2:20</span>
+          </div>
+
+          <div class="audio-buttons-row">
+            <button class="audio-btn" id="prev-track-btn" title="Previous Track">⏮️</button>
+            <button class="audio-btn main-play-btn" id="play-pause-btn" title="Play / Pause">▶️</button>
+            <button class="audio-btn" id="next-track-btn" title="Next Track">⏭️</button>
+            <div class="volume-control-wrap">
+              <span class="vol-icon">🔊</span>
+              <input type="range" id="audio-volume-bar" min="0" max="1" step="0.05" value="0.75" class="witcher-slider vol-slider">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tracklist-container">
+          <div class="tracklist-header">
+            <h4>📜 Songbook of the Continent (Local Audio)</h4>
+            <span class="legal-badge">Official CDPR OST</span>
+          </div>
+          <div class="tracklist" id="tracklist-items">
+            <div class="track-item active" data-index="0">
+              <span class="track-num">1</span>
+              <div class="track-meta">
+                <span class="t-title">⚔️ Silver for Monsters</span>
+                <span class="t-artist">Marcin Przybyłowicz & Percival</span>
+              </div>
+              <span class="track-duration">2:20</span>
+            </div>
+
+            <div class="track-item" data-index="1">
+              <span class="track-num">2</span>
+              <div class="track-meta">
+                <span class="t-title">🏰 Kaer Morhen</span>
+                <span class="t-artist">Marcin Przybyłowicz</span>
+              </div>
+              <span class="track-duration">2:35</span>
+            </div>
+
+            <div class="track-item" data-index="2">
+              <span class="track-num">3</span>
+              <div class="track-meta">
+                <span class="t-title">🩸 ...Steel for Humans (Banana Tiger)</span>
+                <span class="t-artist">Marcin Przybyłowicz & Percival</span>
+              </div>
+              <span class="track-duration">1:27</span>
+            </div>
+
+            <div class="track-item" data-index="3">
+              <span class="track-num">4</span>
+              <div class="track-meta">
+                <span class="t-title">🐺 Geralt of Rivia (Main Theme)</span>
+                <span class="t-artist">Marcin Przybyłowicz</span>
+              </div>
+              <span class="track-duration">2:22</span>
+            </div>
+
+            <div class="track-item" data-index="4">
+              <span class="track-num">5</span>
+              <div class="track-meta">
+                <span class="t-title">🌹 Wilcza Zamieć (The Wolven Storm)</span>
+                <span class="t-artist">Marcin Przybyłowicz & Anna Terpiłowska (Polski oryginał)</span>
+              </div>
+              <span class="track-duration">3:20</span>
+            </div>
+          </div>
+        </div>
+
+
+        <audio id="witcher-audio" preload="auto"></audio>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer id="taskbar">
+    <div id="running-apps">
+      <div class="taskbar-item" data-app="Bestiary" style="display: none;">🐺 Bestiary</div>
+      <div class="taskbar-item" data-app="Contracts" style="display: none;">📜 Contracts</div>
+      <div class="taskbar-item" data-app="Settings" style="display: none;">⚙️ Settings</div>
+      <div class="taskbar-item" data-app="Music" style="display: none;">🎵 Music</div>
+    </div>
+
+    <div id="system-tray">
+      <span id="coin-purse" title="Witcher Crowns">💰 <span id="crowns-count">150</span> Crowns</span>
+      <span id="clock">12:00 PM</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
