@@ -3,7 +3,7 @@ This was my second kinda professional website. It's a fully custom website based
 I built it using: HTML, CCS and Javascript. It was my second time using this langues that much. I really wasn't using them that much.
 I'm happy that I hade a chance to do this/
 
-## Live Demo:##
+## Live Demo:
 
 ## Main Features
 - **Bestiary** - Fully working "book" that have builded in about nine monsters. Also it's very useful in using other programs.
