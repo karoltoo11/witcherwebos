@@ -1,7 +1,7 @@
 # Witcher Operating System in Web
 This was my second kinda professional website. It's a fully custom website based on *Witcher 3: Wild Hunt* universe. Also on other parts of games and books.
 I built it using: HTML, CCS and Javascript. It was my second time using this langues that much. I really wasn't using them that much.
-I'm happy that I hade a chance to do this/
+I'm happy that I hade a chance to do this.
 
 ## Live Demo:
 - https://karoltoo11.github.io/witcherwebos/
