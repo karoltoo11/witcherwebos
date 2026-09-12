@@ -192,6 +192,7 @@ setupWindow('window-Bestiary', 'Bestiary');
 setupWindow('window-Contracts', 'Contracts');
 setupWindow('window-Settings', 'Settings');
 setupWindow('window-Music', 'Music');
+setupWindow('window-Journal', 'Journal');
 
 
 const bestiaryList = document.querySelector('.bestiary-list');
@@ -540,6 +541,7 @@ if (audioSeekBar && witcherAudio) {
 }
 
 if (audioVolBar && witcherAudio) {
+  witcherAudio.volume = 0.75;
   updateSliderProgress(audioVolBar, 75, 100);
   audioVolBar.addEventListener('input', (e) => {
     const vol = parseFloat(e.target.value);
@@ -558,3 +560,124 @@ document.querySelectorAll('#tracklist-items .track-item').forEach(item => {
 
 
 selectTrack(0, false);
+
+
+const defaultNotes = [
+  {
+    id: "note-1",
+    title: "Roach on the roof",
+    date: "1272",
+    text: "Found Roach on the tavern roof in Crow's Perch again. Dandelion laughed, I whistled."
+  },
+  {
+    id: "note-2",
+    title: "Velen moonshine",
+    date: "1272",
+    text: "Never drink swamp moonshine with Johnny. My toxicity bar went through the roof."
+  },
+  {
+    id: "note-3",
+    title: "WebOS on the Continent",
+    date: "1272",
+    text: "Rewriting styles by hand so Rohan approves WebOS 2. All widgets running smooth."
+  }
+];
+
+let notes = JSON.parse(localStorage.getItem('witcher_notes') || 'null');
+if (!notes) {
+  notes = defaultNotes;
+  localStorage.setItem('witcher_notes', JSON.stringify(notes));
+}
+
+let activeNoteId = notes[0]?.id || null;
+
+const notesListEl = document.getElementById('journal-list');
+const titleInput = document.getElementById('journal-title-input');
+const textInput = document.getElementById('journal-text-input');
+const saveBtn = document.getElementById('journal-save-btn');
+const newBtn = document.getElementById('journal-new-btn');
+const delBtn = document.getElementById('journal-delete-btn');
+
+function renderNotes() {
+  if (!notesListEl) return;
+  notesListEl.innerHTML = '';
+  notes.forEach(n => {
+    const item = document.createElement('div');
+    item.className = `journal-entry-item ${n.id === activeNoteId ? 'active' : ''}`;
+    item.innerHTML = `
+      <span class="item-title">${n.title}</span>
+      <span class="item-date">${n.date}</span>
+    `;
+    item.addEventListener('click', () => loadNote(n.id));
+    notesListEl.appendChild(item);
+  });
+}
+
+function loadNote(id) {
+  activeNoteId = id;
+  const n = notes.find(item => item.id === id);
+  if (n) {
+    if (titleInput) titleInput.value = n.title;
+    if (textInput) textInput.value = n.text;
+    if (delBtn) delBtn.style.display = 'inline-block';
+  }
+  renderNotes();
+}
+
+function clearEditor() {
+  activeNoteId = null;
+  if (titleInput) titleInput.value = '';
+  if (textInput) textInput.value = '';
+  if (delBtn) delBtn.style.display = 'none';
+  if (titleInput) titleInput.focus();
+  renderNotes();
+}
+
+if (saveBtn) {
+  saveBtn.addEventListener('click', () => {
+    const title = titleInput?.value.trim() || 'Untitled';
+    const text = textInput?.value.trim() || '';
+
+    if (activeNoteId) {
+      const n = notes.find(item => item.id === activeNoteId);
+      if (n) {
+        n.title = title;
+        n.text = text;
+      }
+    } else {
+      const newNote = {
+        id: 'note-' + Date.now(),
+        title: title,
+        date: new Date().getFullYear().toString(),
+        text: text
+      };
+      notes.unshift(newNote);
+      activeNoteId = newNote.id;
+    }
+
+    localStorage.setItem('witcher_notes', JSON.stringify(notes));
+    renderNotes();
+    if (delBtn) delBtn.style.display = 'inline-block';
+  });
+}
+
+if (newBtn) {
+  newBtn.addEventListener('click', clearEditor);
+}
+
+if (delBtn) {
+  delBtn.addEventListener('click', () => {
+    if (!activeNoteId) return;
+    notes = notes.filter(n => n.id !== activeNoteId);
+    localStorage.setItem('witcher_notes', JSON.stringify(notes));
+    if (notes.length > 0) {
+      loadNote(notes[0].id);
+    } else {
+      clearEditor();
+    }
+  });
+}
+
+if (notes.length > 0) {
+  loadNote(notes[0].id);
+}
