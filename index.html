@@ -32,6 +32,11 @@
         <div class="icon-img">🎵</div>
         <span class="icon-label">Tavern Lute</span>
       </div>
+
+      <div class="icon" data-app="Journal">
+        <div class="icon-img">📝</div>
+        <span class="icon-label">Notes</span>
+      </div>
     </div>
 
 
@@ -701,6 +706,20 @@
           </div>
         </div>
 
+        <hr class="witcher-hr">
+
+        <div class="settings-section">
+          <div class="settings-section-header">
+            <h3>🐺 About WitcherOS</h3>
+            <p>Crafted by hand for Hack Club Stardance.</p>
+          </div>
+          <div class="about-author-box">
+            <p><strong>Created by:</strong> Karol (<a href="https://github.com/karoltoo11" target="_blank" rel="noopener noreferrer" class="author-link">@karoltoo11</a>)</p>
+            <p><strong>Source Code:</strong> <a href="https://github.com/karoltoo11/witcherwebos" target="_blank" rel="noopener noreferrer" class="author-link">github.com/karoltoo11/witcherwebos</a></p>
+            <p class="author-note">A tribute to The Witcher 3: Wild Hunt built with vanilla web technologies.</p>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -807,6 +826,35 @@
       </div>
     </div>
 
+
+    <div class="window" id="window-Journal" style="display: none;">
+      <div class="window-header">
+        <div class="window-title">Notes</div>
+        <div class="window-controls">
+          <button class="win-btn minimize-btn">_</button>
+          <button class="win-btn maximize-btn">□</button>
+          <button class="win-btn close-btn">✕</button>
+        </div>
+      </div>
+      <div class="window-body journal-body">
+        <div class="journal-sidebar">
+          <div class="journal-sidebar-header">
+            <span class="journal-heading">Notes</span>
+            <button id="journal-new-btn" class="witcher-btn new-entry-btn">+ New</button>
+          </div>
+          <div class="journal-list" id="journal-list"></div>
+        </div>
+        <div class="journal-editor">
+          <input type="text" id="journal-title-input" class="journal-title" placeholder="Title..." maxlength="50">
+          <textarea id="journal-text-input" class="journal-text" placeholder="Write a note..."></textarea>
+          <div class="journal-actions">
+            <button id="journal-save-btn" class="witcher-btn">Save</button>
+            <button id="journal-delete-btn" class="witcher-btn delete-btn" style="display: none;">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 
@@ -816,6 +864,7 @@
       <div class="taskbar-item" data-app="Contracts" style="display: none;">📜 Contracts</div>
       <div class="taskbar-item" data-app="Settings" style="display: none;">⚙️ Settings</div>
       <div class="taskbar-item" data-app="Music" style="display: none;">🎵 Music</div>
+      <div class="taskbar-item" data-app="Journal" style="display: none;">Notes</div>
     </div>
 
     <div id="system-tray">
