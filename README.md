@@ -1,6 +1,6 @@
 # Witcher Operating System in Web
 This was my second kinda professional website. It's a fully custom website based on *Witcher 3: Wild Hunt* universe. Also on other parts of games and books.
-I built it using: HTML, CCS and Javascript. It was my second time using this langues that much. I really wasn't using them that much.
+I built it using: HTML, CSS and Javascript. It was my second time using this langues that much. I really wasn't using them that much.
 I'm happy that I hade a chance to do this.
 
 ## Live Demo:
@@ -9,7 +9,8 @@ I'm happy that I hade a chance to do this.
 ## Main Features
 - **Bestiary** - Fully working "book" that have builded in about nine monsters. Also it's very useful in using other programs.
 - **Contracts** - This is a way that you earn money. Here is also builded in mini-game system. You have 3 choices and have to click the right one to win a fight and take your award.
-- **Money system** - Here we are using *crowns* that are money used in Witcher. In feature i want to 
+- **Money system** - Here we are using *crowns* that are money used in Witcher, earned by successfully hunting monsters.
+- **Witcher's Journal** - An in-game journal and notes app where you can write and save your path notes to localStorage.
 - **Clock** - It's really working. Also it was kinda easy. I really enjoyed doing this.
 
 ## Dandelion's Lute 
