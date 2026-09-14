@@ -1,5 +1,3 @@
-/* WitcherOS - Handcrafted Medieval Desktop Stylesheet */
-
 :root {
   --taskbar-height: 48px;
   --accent: #991b1b;
@@ -34,13 +32,11 @@ body {
   user-select: none;
 }
 
-/* Custom Scrollbars */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: #080b0f; }
 ::-webkit-scrollbar-thumb { background: #1b2330; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
 
-/* Desktop Workspace */
 #desktop {
   width: 100vw;
   height: calc(100vh - var(--taskbar-height));
@@ -54,7 +50,6 @@ body {
 #desktop.wp-toussaint   { background: radial-gradient(ellipse at center, #361a22 0%, #170a0f 65%, #060204 100%); }
 #desktop.wp-void        { background: #020305; }
 
-/* Desktop Icons */
 .desktop-icons {
   display: flex;
   flex-direction: column;
@@ -95,7 +90,6 @@ body {
   font-weight: 500;
 }
 
-/* Witcher Window Frames */
 .window {
   position: absolute;
   background: linear-gradient(180deg, #10141b 0%, #0a0d12 100%);
@@ -168,7 +162,6 @@ body {
   font-size: 13px;
 }
 
-/* General Components */
 .witcher-hr {
   border: none;
   height: 1px;
@@ -193,14 +186,12 @@ body {
   background: #11151e;
 }
 
-/* Window Dimensions */
 #window-Bestiary { width: 760px; height: 500px; top: 50px; left: calc(50% - 380px); }
 #window-Contracts{ width: 780px; height: 520px; top: 70px; left: calc(50% - 390px); }
 #window-Settings { width: 560px; height: 510px; top: 90px; left: calc(50% - 280px); }
 #window-Music    { width: 480px; height: 490px; top: 100px; left: calc(50% - 240px); }
 #window-Journal  { width: 720px; height: 480px; top: 75px; left: calc(50% - 360px); }
 
-/* Bestiary App */
 #window-Bestiary .window-body { display: flex; height: 100%; overflow: hidden; }
 
 .bestiary-list {
@@ -275,7 +266,6 @@ body {
   line-height: 1.5;
 }
 
-/* Contracts Notice Board */
 #window-Contracts .window-body { display: flex; height: 100%; overflow: hidden; }
 
 .contracts-list {
@@ -396,7 +386,6 @@ body {
 .contract-result.success { background: #0a2314; border: 1px solid #22c55e; color: #86efac; }
 .contract-result.failure { background: #260c10; border: 1px solid #ef4444; color: #fca5a5; }
 
-/* Settings App */
 #window-Settings .window-body { padding: 18px 20px; }
 .settings-section { margin-bottom: 18px; }
 
@@ -474,7 +463,6 @@ body {
 .author-link:hover { text-decoration: underline; color: #fff; }
 .author-note { margin-top: 6px; font-size: 11px; color: var(--text-muted); }
 
-/* Tavern Lute Music Player */
 #window-Music .window-body { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
 
 .now-playing-card {
@@ -613,7 +601,6 @@ body {
 .t-title { color: #fff; }
 .t-artist, .track-duration { font-size: 10px; color: var(--text-muted); }
 
-/* Witcher's Notes / Journal */
 .journal-body { display: flex; height: 100%; overflow: hidden; }
 
 .journal-sidebar {
@@ -697,7 +684,6 @@ body {
 .delete-btn { background: #240c0f; border-color: #7f1d1d; color: #fca5a5; }
 .delete-btn:hover { background: #991b1b; color: #fff; }
 
-/* Taskbar & System Tray */
 #taskbar {
   position: fixed;
   bottom: 0;
@@ -744,3 +730,4 @@ body {
   color: #fff;
 }
 .interactive-clock:hover { border-color: var(--accent); }
+

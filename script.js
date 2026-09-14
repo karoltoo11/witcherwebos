@@ -562,34 +562,12 @@ document.querySelectorAll('#tracklist-items .track-item').forEach(item => {
 selectTrack(0, false);
 
 
-const defaultNotes = [
-  {
-    id: "note-1",
-    title: "Roach on the roof",
-    date: "1272",
-    text: "Found Roach on the tavern roof in Crow's Perch again. Dandelion laughed, I whistled."
-  },
-  {
-    id: "note-2",
-    title: "Velen moonshine",
-    date: "1272",
-    text: "Never drink swamp moonshine with Johnny. My toxicity bar went through the roof."
-  },
-  {
-    id: "note-3",
-    title: "WebOS on the Continent",
-    date: "1272",
-    text: "Rewriting styles by hand so Rohan approves WebOS 2. All widgets running smooth."
-  }
-];
-
-let notes = JSON.parse(localStorage.getItem('witcher_notes') || 'null');
-if (!notes) {
-  notes = defaultNotes;
-  localStorage.setItem('witcher_notes', JSON.stringify(notes));
+let notes = JSON.parse(localStorage.getItem('witcher_notes') || '[]');
+if (notes.some(n => n.id === 'note-1' || n.title === 'Roach on the roof')) {
+  notes = [];
+  localStorage.setItem('witcher_notes', '[]');
 }
-
-let activeNoteId = notes[0]?.id || null;
+let activeNoteId = null;
 
 const notesListEl = document.getElementById('journal-list');
 const titleInput = document.getElementById('journal-title-input');
@@ -678,6 +656,4 @@ if (delBtn) {
   });
 }
 
-if (notes.length > 0) {
-  loadNote(notes[0].id);
-}
+clearEditor();
