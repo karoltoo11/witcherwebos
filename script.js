@@ -387,27 +387,27 @@ if (showSecondsCheckbox) {
 
 const localPlaylist = [
   {
-    title: "⚔️ Silver for Monsters",
+    title: "Silver for Monsters",
     artist: "Marcin Przybyłowicz & Percival",
     src: "music/silver_for_monsters.mp3"
   },
   {
-    title: "🏰 Kaer Morhen",
+    title: "Kaer Morhen",
     artist: "Marcin Przybyłowicz",
     src: "music/kaer_morhen.mp3"
   },
   {
-    title: "🩸 ...Steel for Humans (Banana Tiger)",
+    title: "...Steel for Humans",
     artist: "Marcin Przybyłowicz & Percival",
     src: "music/steel_for_humans.mp3"
   },
   {
-    title: "🐺 Geralt of Rivia (Main Theme)",
+    title: "Geralt of Rivia (Main Theme)",
     artist: "Marcin Przybyłowicz",
     src: "music/geralt_of_rivia.mp3"
   },
   {
-    title: "🌹 Wilcza Zamieć (The Wolven Storm)",
+    title: "Wilcza Zamieć (The Wolven Storm)",
     artist: "Marcin Przybyłowicz & Anna Terpiłowska (Polski oryginał)",
     src: "music/priscillas_song.mp3"
   }
