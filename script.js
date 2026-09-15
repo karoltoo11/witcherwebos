@@ -276,10 +276,10 @@ window.resolveContract = function(id, isCorrect, explanation) {
     badge.className = 'contract-badge completed';
     result.className = 'contract-result success';
     result.innerHTML = `
-      <strong>🏆 CONTRACT COMPLETED!</strong><br>
+      <strong>CONTRACT COMPLETED</strong><br>
       ${explanation}<br>
       <div style="margin-top: 8px; font-weight: bold; color: #facc15;">
-        💰 Bounty Collected: +${reward} Crowns added to your purse!
+        Bounty Collected: +${reward} Crowns added to your purse.
       </div>
     `;
     addCrowns(reward);
@@ -288,10 +288,10 @@ window.resolveContract = function(id, isCorrect, explanation) {
     badge.className = 'contract-badge failed';
     result.className = 'contract-result failure';
     result.innerHTML = `
-      <strong>💀 CONTRACT FAILED!</strong><br>
+      <strong>CONTRACT FAILED</strong><br>
       ${explanation}<br>
       <div style="margin-top: 8px;">
-        <button class="witcher-btn" onclick="resetContract('${id}', ${reward})">🔄 Meditate & Retry Hunt</button>
+        <button class="witcher-btn" onclick="resetContract('${id}', ${reward})">Meditate & Retry</button>
       </div>
     `;
   }

@@ -81,7 +81,18 @@ body {
   border-color: var(--accent);
 }
 
-.icon-img { font-size: 28px; }
+.icon-img {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d1d5db;
+  transition: color 0.15s;
+}
+.icon:hover .icon-img { color: #fff; }
+.icon.selected .icon-img { color: var(--witcher-accent-bright); }
+
 .icon-label {
   font-size: 11px;
   color: #fff;
