@@ -41,14 +41,13 @@ body {
   width: 100vw;
   height: calc(100vh - var(--taskbar-height));
   position: relative;
-  background: radial-gradient(ellipse at center, #1b2434 0%, #0a0d14 65%, #040508 100%);
-  transition: background 0.3s ease;
+  background: #0a0d14;
 }
 
-#desktop.wp-kaer-morhen { background: radial-gradient(ellipse at center, #1b2434 0%, #0a0d14 65%, #040508 100%); }
-#desktop.wp-velen       { background: radial-gradient(ellipse at center, #17261d 0%, #0b140f 65%, #030604 100%); }
-#desktop.wp-toussaint   { background: radial-gradient(ellipse at center, #361a22 0%, #170a0f 65%, #060204 100%); }
-#desktop.wp-void        { background: #020305; }
+#desktop.wp-kaer-morhen { background: radial-gradient(circle, #1b2434 0%, #080b10 100%); }
+#desktop.wp-velen       { background: radial-gradient(circle, #17261d 0%, #050a08 100%); }
+#desktop.wp-toussaint   { background: radial-gradient(circle, #361a22 0%, #090305 100%); }
+#desktop.wp-void        { background: #000000; }
 
 .desktop-icons {
   display: flex;
@@ -103,10 +102,10 @@ body {
 
 .window {
   position: absolute;
-  background: linear-gradient(180deg, #10141b 0%, #0a0d12 100%);
+  background: #0d1117;
   border: 1px solid var(--panel-border);
   border-radius: 4px;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 8px 30px #000;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -116,7 +115,7 @@ body {
 
 .window.active-window {
   border-color: var(--accent);
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.95), 0 0 16px rgba(220, 38, 38, 0.2);
+  box-shadow: 0 8px 30px #000, 0 0 10px var(--accent);
 }
 
 .window.dragging { opacity: 0.92; }

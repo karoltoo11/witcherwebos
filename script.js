@@ -56,67 +56,26 @@ function setupWindow(windowId, appName) {
 
 
   if (header) {
-    let isDragging = false;
-    let startX, startY, initialLeft, initialTop;
-    let targetLeft, targetTop;
-    let rafId = null;
-
     header.addEventListener('mousedown', (e) => {
-      if (e.target.classList.contains('win-btn')) return;
-      if (win.classList.contains('maximized')) return;
-
-      isDragging = true;
-      startX = e.clientX;
-      startY = e.clientY;
-      initialLeft = win.offsetLeft;
-      initialTop = win.offsetTop;
-      targetLeft = initialLeft;
-      targetTop = initialTop;
-
-      win.classList.add('dragging');
+      if (e.target.classList.contains('win-btn') || win.classList.contains('maximized')) return;
       bringToFront();
 
-      function updatePosition() {
-        if (!isDragging) return;
-        win.style.left = `${targetLeft}px`;
-        win.style.top = `${targetTop}px`;
-        rafId = null;
-      }
+      let shiftX = e.clientX - win.offsetLeft;
+      let shiftY = e.clientY - win.offsetTop;
 
       function onMouseMove(e) {
-        if (!isDragging) return;
-        const deltaX = e.clientX - startX;
-        const deltaY = e.clientY - startY;
-
-        // Keep at least part of the window inside the screen
-        const maxTop = window.innerHeight - 80;
-        targetLeft = initialLeft + deltaX;
-        targetTop = Math.max(0, Math.min(initialTop + deltaY, maxTop));
-
-        if (!rafId) {
-          rafId = requestAnimationFrame(updatePosition);
-        }
+        win.style.left = (e.clientX - shiftX) + 'px';
+        win.style.top = Math.max(0, (e.clientY - shiftY)) + 'px';
       }
 
       function onMouseUp() {
-        if (!isDragging) return;
-        isDragging = false;
-        win.classList.remove('dragging');
-        if (rafId) {
-          cancelAnimationFrame(rafId);
-          rafId = null;
-        }
-        win.style.left = `${targetLeft}px`;
-        win.style.top = `${targetTop}px`;
-
         document.removeEventListener('mousemove', onMouseMove);
         document.removeEventListener('mouseup', onMouseUp);
       }
 
-      document.addEventListener('mousemove', onMouseMove, { passive: true });
+      document.addEventListener('mousemove', onMouseMove);
       document.addEventListener('mouseup', onMouseUp);
     });
-
 
     header.addEventListener('dblclick', (e) => {
       if (e.target.classList.contains('win-btn')) return;
