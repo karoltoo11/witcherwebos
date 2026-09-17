@@ -657,3 +657,13 @@ if (delBtn) {
 }
 
 clearEditor();
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const active = document.querySelector('.window.active-window');
+    if (active && active.style.display !== 'none') {
+      const close = active.querySelector('.close-btn');
+      if (close) close.click();
+    }
+  }
+});
