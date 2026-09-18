@@ -44,9 +44,9 @@ body {
   background: #0a0d14;
 }
 
-#desktop.wp-kaer-morhen { background: radial-gradient(circle, #1b2434 0%, #080b10 100%); }
-#desktop.wp-velen       { background: radial-gradient(circle, #17261d 0%, #050a08 100%); }
-#desktop.wp-toussaint   { background: radial-gradient(circle, #361a22 0%, #090305 100%); }
+#desktop.wp-kaer-morhen { background: #0f172a; }
+#desktop.wp-velen       { background: #0c1813; }
+#desktop.wp-toussaint   { background: #1a0f16; }
 #desktop.wp-void        { background: #000000; }
 
 .desktop-icons {
@@ -71,12 +71,12 @@ body {
 }
 
 .icon:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: #111722;
+  border-color: #2a3342;
 }
 
 .icon.selected {
-  background: rgba(255, 255, 255, 0.08);
+  background: #172030;
   border-color: var(--accent);
 }
 
@@ -95,7 +95,6 @@ body {
 .icon-label {
   font-size: 11px;
   color: #fff;
-  text-shadow: 0 1px 4px #000;
   text-align: center;
   font-weight: 500;
 }
@@ -105,7 +104,6 @@ body {
   background: #0d1117;
   border: 1px solid var(--panel-border);
   border-radius: 4px;
-  box-shadow: 0 8px 30px #000;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -115,7 +113,6 @@ body {
 
 .window.active-window {
   border-color: var(--accent);
-  box-shadow: 0 8px 30px #000, 0 0 10px var(--accent);
 }
 
 .window.dragging { opacity: 0.92; }
@@ -266,8 +263,8 @@ body {
 .monster-desc { line-height: 1.6; color: #94a3b8; font-size: 13px; }
 
 .witcher-tips {
-  background: rgba(153, 27, 27, 0.12);
-  border: 1px solid rgba(220, 38, 38, 0.25);
+  background: #180d0d;
+  border: 1px solid #3b1111;
   border-left: 3px solid var(--accent);
   padding: 12px 14px;
   border-radius: 4px;

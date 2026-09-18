@@ -465,19 +465,12 @@ if (nextBtn) {
   });
 }
 
-function updateSliderProgress(slider, value, max = 100) {
-  if (!slider) return;
-  const pct = (value / max) * 100;
-  slider.style.background = `linear-gradient(to right, var(--witcher-accent-bright) 0%, var(--witcher-accent-bright) ${pct}%, #232936 ${pct}%, #232936 100%)`;
-}
-
 if (witcherAudio) {
   witcherAudio.addEventListener('timeupdate', () => {
     if (!witcherAudio.duration) return;
     const pct = (witcherAudio.currentTime / witcherAudio.duration) * 100;
     if (audioSeekBar) {
       audioSeekBar.value = pct;
-      updateSliderProgress(audioSeekBar, pct, 100);
     }
     if (curTimeText) curTimeText.textContent = formatTime(witcherAudio.currentTime);
     if (durTimeText) durTimeText.textContent = formatTime(witcherAudio.duration);
@@ -492,7 +485,6 @@ if (witcherAudio) {
 if (audioSeekBar && witcherAudio) {
   audioSeekBar.addEventListener('input', () => {
     const val = parseFloat(audioSeekBar.value);
-    updateSliderProgress(audioSeekBar, val, 100);
     if (witcherAudio.duration) {
       witcherAudio.currentTime = (val / 100) * witcherAudio.duration;
     }
@@ -501,11 +493,9 @@ if (audioSeekBar && witcherAudio) {
 
 if (audioVolBar && witcherAudio) {
   witcherAudio.volume = 0.75;
-  updateSliderProgress(audioVolBar, 75, 100);
   audioVolBar.addEventListener('input', (e) => {
     const vol = parseFloat(e.target.value);
     witcherAudio.volume = vol;
-    updateSliderProgress(audioVolBar, vol * 100, 100);
   });
 }
 
