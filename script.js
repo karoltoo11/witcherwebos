@@ -424,8 +424,7 @@ function playAudio() {
   if (!witcherAudio) return;
   witcherAudio.play().then(() => {
     isAudioPlaying = true;
-    if (playBtn) playBtn.textContent = '⏸️';
-    if (diskSpinner) diskSpinner.classList.add('spinning');
+    if (playBtn) playBtn.textContent = 'Pause';
     if (playerStatusBadge) playerStatusBadge.textContent = 'PLAYING TUNE';
   }).catch(e => {
     console.log("Audio play blocked until click:", e);
@@ -436,8 +435,7 @@ function pauseAudio() {
   if (!witcherAudio) return;
   witcherAudio.pause();
   isAudioPlaying = false;
-  if (playBtn) playBtn.textContent = '▶️';
-  if (diskSpinner) diskSpinner.classList.remove('spinning');
+  if (playBtn) playBtn.textContent = 'Play';
   if (playerStatusBadge) playerStatusBadge.textContent = 'PAUSED';
 }
 

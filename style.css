@@ -1,7 +1,6 @@
 :root {
   --taskbar-height: 48px;
   --accent: #991b1b;
-  --witcher-accent-bright: #dc2626;
   --btn-bg: #000000;
   --btn-border: #2a3342;
   --panel-bg: #0c0f14;
@@ -12,10 +11,10 @@
   --font-witcher: 'Cinzel', Georgia, serif;
 }
 
-body[data-school="wolf"] { --accent: #991b1b; --witcher-accent-bright: #dc2626; }
-body[data-school="cat"]  { --accent: #0284c7; --witcher-accent-bright: #38bdf8; }
-body[data-school="bear"] { --accent: #059669; --witcher-accent-bright: #34d399; }
-body[data-school="viper"]{ --accent: #d97706; --witcher-accent-bright: #fbbf24; }
+body[data-school="wolf"] { --accent: #991b1b; }
+body[data-school="cat"]  { --accent: #0284c7; }
+body[data-school="bear"] { --accent: #059669; }
+body[data-school="viper"]{ --accent: #d97706; }
 
 * {
   box-sizing: border-box;
@@ -25,7 +24,7 @@ body[data-school="viper"]{ --accent: #d97706; --witcher-accent-bright: #fbbf24; 
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background: #040608;
+  background: #000000;
   color: var(--text-main);
   height: 100vh;
   overflow: hidden;
@@ -41,12 +40,12 @@ body {
   width: 100vw;
   height: calc(100vh - var(--taskbar-height));
   position: relative;
-  background: #0a0d14;
+  background: #111111;
 }
 
-#desktop.wp-kaer-morhen { background: #0f172a; }
-#desktop.wp-velen       { background: #0c1813; }
-#desktop.wp-toussaint   { background: #1a0f16; }
+#desktop.wp-kaer-morhen { background: #161616; }
+#desktop.wp-velen       { background: #121512; }
+#desktop.wp-toussaint   { background: #181215; }
 #desktop.wp-void        { background: #000000; }
 
 .desktop-icons {
@@ -67,7 +66,6 @@ body {
   border-radius: 4px;
   cursor: pointer;
   border: 1px solid transparent;
-  transition: 0.15s;
 }
 
 .icon:hover {
@@ -87,10 +85,9 @@ body {
   align-items: center;
   justify-content: center;
   color: #d1d5db;
-  transition: color 0.15s;
 }
 .icon:hover .icon-img { color: #fff; }
-.icon.selected .icon-img { color: var(--witcher-accent-bright); }
+.icon.selected .icon-img { color: var(--accent); }
 
 .icon-label {
   font-size: 11px;
@@ -185,7 +182,6 @@ body {
   cursor: pointer;
   font-size: 12px;
   font-family: inherit;
-  transition: 0.15s;
 }
 
 .witcher-btn:hover {
@@ -219,7 +215,6 @@ body {
   text-align: left;
   cursor: pointer;
   font-size: 12px;
-  transition: 0.15s;
 }
 
 .monster-tab:hover { background: #0f131a; color: #fff; }
@@ -293,7 +288,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3px;
-  transition: 0.15s;
 }
 
 .contract-tab:hover { background: #0f131a; }
@@ -374,7 +368,6 @@ body {
   cursor: pointer;
   text-align: left;
   font-size: 12px;
-  transition: 0.15s;
 }
 
 .quiz-opt:hover {
@@ -421,7 +414,6 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: 0.15s;
 }
 
 .theme-card:hover, .wallpaper-opt:hover { background: #0f131a; border-color: #4b5563; }
@@ -494,8 +486,8 @@ body {
   font-size: 20px;
 }
 
-.lute-disk.spinning { animation: spinLute 4s linear infinite; }
-@keyframes spinLute { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+ to { transform: rotate(360deg); } }
 
 .track-details { flex: 1; }
 .track-details h3 { font-family: var(--font-witcher); font-size: 14px; color: #fff; }
@@ -522,7 +514,7 @@ body {
 
 .witcher-slider {
   flex: 1;
-  accent-color: var(--witcher-accent-bright);
+  accent-color: var(--accent);
   cursor: pointer;
   height: 6px;
 }
@@ -598,7 +590,6 @@ body {
   cursor: pointer;
   border-radius: 3px;
   font-size: 11px;
-  transition: 0.15s;
 }
 
 .track-item:hover { background: #0f131a; }
@@ -644,7 +635,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  transition: 0.15s;
 }
 
 .journal-entry-item:hover { background: #0f131a; }
@@ -719,7 +709,6 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
-  transition: 0.15s;
 }
 
 .taskbar-item:hover { background: #11151e; color: #fff; border-color: #4b5563; }
