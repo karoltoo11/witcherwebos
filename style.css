@@ -11,10 +11,10 @@
   --font-witcher: 'Cinzel', Georgia, serif;
 }
 
-body[data-school="wolf"] { --accent: #991b1b; }
-body[data-school="cat"]  { --accent: #0284c7; }
-body[data-school="bear"] { --accent: #059669; }
-body[data-school="viper"]{ --accent: #d97706; }
+body[data-school="wolf"] { --accent: #881c1c; }
+body[data-school="cat"]  { --accent: #254a70; }
+body[data-school="bear"] { --accent: #1e5233; }
+body[data-school="viper"]{ --accent: #784812; }
 
 * {
   box-sizing: border-box;
@@ -75,7 +75,7 @@ body {
 
 .icon.selected {
   background: #172030;
-  border-color: var(--accent);
+  border-color: #3b4452;
 }
 
 .icon-img {
@@ -87,7 +87,7 @@ body {
   color: #d1d5db;
 }
 .icon:hover .icon-img { color: #fff; }
-.icon.selected .icon-img { color: var(--accent); }
+.icon.selected .icon-img { color: #fff; }
 
 .icon-label {
   font-size: 11px;
@@ -109,7 +109,7 @@ body {
 }
 
 .window.active-window {
-  border-color: var(--accent);
+  border-color: #3b4452;
 }
 
 .window.dragging { opacity: 0.92; }
@@ -185,7 +185,7 @@ body {
 }
 
 .witcher-btn:hover {
-  border-color: var(--accent);
+  border-color: #4b5563;
   background: #11151e;
 }
 
@@ -372,7 +372,7 @@ body {
 
 .quiz-opt:hover {
   background: #11151e;
-  border-color: var(--accent);
+  border-color: #4b5563;
   color: #fff;
 }
 
@@ -416,21 +416,21 @@ body {
   gap: 10px;
 }
 
-.theme-card:hover, .wallpaper-opt:hover { background: #0f131a; border-color: #4b5563; }
-.theme-card.active, .wallpaper-opt.active { background: #131722; border-color: var(--accent); }
+.theme-card:hover, .wallpaper-opt:hover { background: #0f131a; border-color: #3b4452; }
+.theme-card.active, .wallpaper-opt.active { background: #131722; border-color: #4b5563; }
 
 .theme-preview {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 1px solid #3b4452;
   flex-shrink: 0;
 }
 
-.theme-card[data-school="wolf"] .theme-preview  { background: #dc2626; }
-.theme-card[data-school="cat"] .theme-preview   { background: #38bdf8; }
-.theme-card[data-school="bear"] .theme-preview  { background: #34d399; }
-.theme-card[data-school="viper"] .theme-preview { background: #fbbf24; }
+.theme-card[data-school="wolf"] .theme-preview  { background: #881c1c; }
+.theme-card[data-school="cat"] .theme-preview   { background: #254a70; }
+.theme-card[data-school="bear"] .theme-preview  { background: #1e5233; }
+.theme-card[data-school="viper"] .theme-preview { background: #784812; }
 
 .theme-info, .wallpaper-opt { display: flex; flex-direction: column; gap: 2px; }
 .theme-info strong, .wp-badge { font-size: 12px; color: #fff; }
@@ -541,8 +541,8 @@ body {
   font-size: 12px;
 }
 
-.audio-btn:hover { background: #131720; border-color: var(--accent); }
-.main-play-btn { width: 38px; height: 38px; font-size: 14px; border-color: var(--accent); }
+.audio-btn:hover { background: #131720; border-color: #4b5563; }
+.main-play-btn { width: 38px; height: 38px; font-size: 14px; border-color: #4b5563; }
 
 .volume-control-wrap {
   position: absolute;
@@ -593,8 +593,8 @@ body {
 }
 
 .track-item:hover { background: #0f131a; }
-.track-item.active { background: #131722; border-color: var(--accent); color: #fff; }
-.track-num { color: var(--accent); font-weight: bold; width: 14px; }
+.track-item.active { background: #131722; border-color: #4b5563; color: #fff; }
+.track-num { color: #838e9e; font-weight: bold; width: 14px; }
 .track-meta { flex: 1; display: flex; flex-direction: column; }
 .t-title { color: #fff; }
 .t-artist, .track-duration { font-size: 10px; color: var(--text-muted); }
@@ -662,7 +662,7 @@ body {
   font-family: var(--font-witcher);
 }
 
-.journal-title:focus, .journal-text:focus { outline: none; border-color: var(--accent); }
+.journal-title:focus, .journal-text:focus { outline: none; border-color: #4b5563; }
 
 .journal-text {
   flex: 1;
@@ -712,7 +712,7 @@ body {
 }
 
 .taskbar-item:hover { background: #11151e; color: #fff; border-color: #4b5563; }
-.taskbar-item.active { background: #131722; border-color: var(--accent); color: #fff; font-weight: 500; }
+.taskbar-item.active { background: #131722; border-color: #4b5563; color: #fff; font-weight: 500; }
 
 #system-tray { display: flex; align-items: center; gap: 14px; font-size: 12px; }
 #coin-purse { color: var(--gold); font-weight: 600; }
@@ -725,5 +725,5 @@ body {
   cursor: pointer;
   color: #fff;
 }
-.interactive-clock:hover { border-color: var(--accent); }
+.interactive-clock:hover { border-color: #4b5563; }
 
